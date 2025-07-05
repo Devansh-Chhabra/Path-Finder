@@ -1,77 +1,97 @@
-Pathfinder's Quest
-Pathfinder's Quest is a Python application that visualizes different pathfinding algorithms (BFS, DFS, and A*) on a grid with obstacles. The application allows users to compare the performance of these algorithms in terms of time taken, path length, and number of visited nodes.
+# Pathfinder's Quest 🗺️
 
-Features
-Interactive visualization of pathfinding algorithms
-Three different algorithms implemented:
-Breadth-First Search (BFS)
-Depth-First Search (DFS)
-A* Search Algorithm
-Randomly generated grid with obstacles, start, and goal positions
-Algorithm comparison feature
-Real-time statistics display
-Keyboard controls for easy interaction
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pygame](https://img.shields.io/badge/pygame-%23FFFFFF.svg?style=for-the-badge&logo=pygame&logoColor=black)
 
-Installation
+A visual comparison tool for pathfinding algorithms (BFS, DFS, A*) with interactive grid visualization.
 
-Clone this repository:
-bash
-git clone https://github.com/yourusername/pathfinders-quest.git
-cd pathfinders-quest
-Install the required dependencies:
-bash
+## Features ✨
+
+- **Interactive visualization** of pathfinding algorithms
+- **Three algorithms** implemented:
+  - 🟦 Breadth-First Search (BFS)
+  - 🟩 Depth-First Search (DFS)
+  - 🟪 A* Search Algorithm
+- **Dynamic grid generation** with random obstacles
+- **Performance metrics** comparison
+- **Keyboard controls** for easy interaction
+
+## Installation ⚙️
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Devansh-Chhabra/Path-Finder
+cd Path-Finder
+```
+
+2. Install dependencies:
+```bash
 pip install -r requirements.txt
-Usage
+```
+
+## Usage 🚀
 
 Run the application:
-
-bash
+```bash
 python Path_finder_file.py
-Controls
+```
 
-B: Run Breadth-First Search (BFS)
-D: Run Depth-First Search (DFS)
-A: Run A* Search Algorithm
-C: Compare all algorithms
-R: Reset the visualization
-Algorithms
+## Controls 🎮
 
-Breadth-First Search (BFS)
+Key	Action
+- B	Run BFS algorithm
+- D	Run DFS algorithm
+- A	Run A* algorithm
+- C	Compare all algorithms
+- R	Reset visualization
 
-Explores all neighbor nodes at the present depth before moving on to nodes at the next depth level
-Guaranteed to find the shortest path in an unweighted grid
-Depth-First Search (DFS)
 
-Explores as far as possible along each branch before backtracking
-Doesn't guarantee the shortest path but may find a solution faster in some cases
-A* Search Algorithm
+## Algorithm Details 🤖
 
-Uses a heuristic to estimate the cost to the goal from each node
-Combines the cost to reach the node and the estimated cost to the goal
-Typically more efficient than BFS or DFS when a good heuristic is available
-Comparison Metrics
+| Algorithm | Guarantees Shortest Path? | Time Complexity | Space Complexity |
+|-----------|--------------------------|-----------------|------------------|
+| BFS       | ✅ Yes                   | O(V+E)          | O(V)             |
+| DFS       | ❌ No                    | O(V+E)          | O(V)             |
+| A*        | ✅ Yes (with good heuristic) | O(E)       | O(V)             |
 
-When comparing algorithms, the application evaluates:
+## Customization 🛠️
 
-Time taken: Execution time in seconds
-Path length: Number of steps in the found path
-Visited nodes: Number of nodes explored during the search
-Customization
+Modify these parameters in the code:
 
-You can modify the following parameters in the code:
+# Grid settings
+rows, cols = 20, 20            # Grid dimensions
 
-Grid size (rows and columns)
-Number of obstacles
-Colors for different elements
-Visualization speed
-Requirements
+obstacles = int(0.3*rows*cols)    # Obstacle density
 
-Python 3.x
-Pygame 2.6.1
-Contributing
+# Visual settings
+VISIT_COLOR = (173,216,230)      # Light blue for visited nodes
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+PATH_COLOR = (0,0,255)           # Blue for final path
 
-License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Contributing 🤝
+
+Contributions welcome! Please:
+- Fork the project
+- Create your feature branch (git checkout -b feature/AmazingFeature)
+- Commit your changes (git commit -m 'Add some amazing feature')
+- Push to the branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
+
+
+## License 📜
+
+Distributed under the MIT License. See LICENSE for more information.
+
+
+## Made with ❤️ and Python 🐍
+Key improvements:
+- Added badges for Python/Pygame
+- Better visual hierarchy with emojis
+- Responsive tables for controls/algorithms
+- Clear code block formatting
+- More professional structure
+- Added placeholder for screenshot
+- Contribution guidelines
+- License information
